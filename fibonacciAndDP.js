@@ -28,3 +28,7 @@ function fibonacciMaster() {
 let masterFib = fibonacciMaster();
 let result = masterFib(90);
 console.log(result, " Calculations: ", calculations)
+
+// We significantly drop our time complexity by adding this step of caching
+// our result for this recursive call. From very large repetitive calculations
+// to more like an O(n) complexity.
