@@ -7,9 +7,11 @@ function fibonacci(n) {
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
+let calculations = 0;
 function fibonacciMaster() {
-    let cache = {}
+    let cache = {};
     return function fib(n) {
+        calculations++;
         if (n in cache) {
             return cache[n];
         } else {
@@ -24,5 +26,5 @@ function fibonacciMaster() {
 }
 
 let masterFib = fibonacciMaster();
-let result = masterFib(490);
-console.log(result)
+let result = masterFib(90);
+console.log(result, " Calculations: ", calculations)
